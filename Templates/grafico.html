@@ -1,0 +1,84 @@
+<head>
+    <title>CoronaGraphics</title>
+    <link rel="stylesheet" href=" {{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+
+
+
+
+
+    </style>
+</head>
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-graph-up"
+                 viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                      d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <span class="fs-1 ms-3 fw-bold">Corona Graphics</span>
+        </a>
+    </header>
+    <main>
+        <form action='grafico' method="post">
+            <div class="mb-4">
+                <label for="idade" class="form-label">Idade</label>
+                <select id="idade" name="idade" class="form-select" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="25">Novo</option>
+                    <option value="45">Jovem</option>
+                    <option value="60">velho</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="sexo" class="form-label">Sexo</label>
+                <select id="sexo" name="sexo" class="form-select" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="M">Homem</option>
+                    <option value="F">Mulher</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="cidade" class="form-label">Cidade</label>
+                <select id="cidade" name="cidade" class="form-select" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="1">Sao Jose</option>
+                    <option value="2">Taubate</option>
+                    <option value="3">Rio de Janeiro</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label for="tipo" class="form-label">Idade</label>
+                <select id="tipo" name="tipo" class="form-select" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="p">Pizza</option>
+                    <option value="b">Barras</option>
+                    <option value="bh">Barra Horizontal</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <input class="btn btn-primary" type="submit" value="Gerar">
+            </div>
+        </form>
+        <img src="static/{{arq}}.png">
+    </main>
+</div>
+<body>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+</body>
+</html>

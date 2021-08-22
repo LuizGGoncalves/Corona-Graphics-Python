@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <title>CoronaGraphics</title>
+    <link rel="stylesheet" href=" {{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+    </style>
+</head>
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-graph-up"
+                 viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                      d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+            <span class="fs-1 ms-3 fw-bold">Corona Graphics</span>
+        </a>
+    </header>
+
+    <main>
+        <h1>Crie seus Graficos de maneira eficiente e simples.</h1>
+        <p class="fs-5 col-md-8">Analise dados sobre vacinaçao e gere graficos de maneira simples rapida e
+            eficiente. </p>
+        <div class="mb-5">
+            <a href="../grafico" class="btn btn-primary btn-lg px-4">Gere seu Grafico</a>
+        </div>
+
+
+        <div id="carouselExampleControls" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="static/ex01.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="static/ex02.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="static/ex03.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </main>
+</div>
+<body>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+</body>
+</html>
