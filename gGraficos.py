@@ -16,6 +16,6 @@ def criarimg(t1,v1,t2,v2,t3,v3, tipo="barra"):
     elif tipo == "bh":
         plt.barh(grupos, valores)
     nome = v1
-    plt.savefig(f'static/{nome}.png')
+    plt.savefig(f'static/png-grafico/{nome}.png')
     plt.close('all')
     return nome
